@@ -2,8 +2,8 @@
   <main class="flex-1 p-6 bg-gray-50 dark:bg-gray-900 overflow-auto">
     <!-- Page Header -->
     <div class="mb-8 pointer-events-none user-select-none">
-      <h1 class="text-3xl font-bold text-gray-900 dark:text-white select-none">Dashboard</h1>
-      <p class="text-gray-600 dark:text-gray-400 mt-2">Welcome to Eggflow System</p>
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white select-none user-select-none">Dashboard</h1>
+      <p class="text-gray-600 dark:text-gray-400 mt-2 user-select-none">Welcome to Eggflow System</p>
     </div>
 
     <!-- Stats Grid -->
