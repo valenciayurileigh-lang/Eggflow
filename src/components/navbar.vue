@@ -1,6 +1,6 @@
 <template>
 
-  <header class="navbar sticky top-0 shadow-sm z-10" style="background-color: #FFFFFF; border-bottom: 2px solid #DBE4C9;">
+  <header class="navbar sticky top-0 shadow-sm z-10" style="background-color: #FFFFFF; border-bottom: 2px solid #80AF81;">
 
     <!-- Sidebar Toggle Button -->
     <section class="flex items-center">
@@ -8,9 +8,9 @@
         for="my-drawer" 
         class="btn btn-ghost btn-circle lg:hidden ml-2"
         aria-label="Toggle sidebar"
-        style="color: #EA4405;"
-        @mouseenter="$event.target.style.backgroundColor = '#DBE4C9'"
-        @mouseleave="$event.target.style.backgroundColor = 'transparent'"
+        style="color: #1A5319;"
+        @mouseenter="$event.target.style.backgroundColor = '#508D4E'; $event.target.style.color = '#FFFFFF'"
+        @mouseleave="$event.target.style.backgroundColor = 'transparent'; $event.target.style.color = '#1A5319'"
       >
         <Icon icon="heroicons-outline:bars-3" width="24" height="24" />
       </label>
@@ -19,13 +19,13 @@
     <!-- Logo and Branding -->
     <section class="flex-1 flex items-center gap-3 ml-4">
       <Icon
-        icon="mdi:egg"
+        
         width="32"
         height="32"
-        style="color: #EA4405;"
+        style="color: #1A5319;"
         aria-hidden="true"
       />
-      <span class="text-xl font-bold" style="color: #EA4405;">Dashboard </span>
+      <span class="text-xl font-bold" style="color: #1A5319;">Dashboard </span>
     </section>
 
     <!-- User Section -->
@@ -40,8 +40,8 @@
           role="button"
           class="btn btn-ghost btn-circle avatar focus-ring"
           style="background-color: transparent;"
-          @mouseenter="$event.target.style.backgroundColor = '#DBE4C9'"
-          @mouseleave="$event.target.style.backgroundColor = 'transparent'"
+          @mouseenter="$event.target.style.backgroundColor = '#508D4E'; $event.target.style.color = '#FFFFFF'"
+          @mouseleave="$event.target.style.backgroundColor = 'transparent'; $event.target.style.color = 'inherit'"
           aria-label="User menu"
           aria-haspopup="menu"
           aria-expanded="false"
@@ -53,7 +53,7 @@
         <ul
           tabindex="0"
           class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-56 space-y-1 font-semibold text-sm"
-          style="background-color: #FFFFFF; border: 2px solid #DBE4C9; color: #000000;"
+          style="background-color: #FFFFFF; border: 2px solid #80AF81; color: #000000;"
           role="menu"
           aria-label="User menu options"
         >
@@ -64,7 +64,7 @@
             <a role="menuitem" href="#" class="focus-ring" style="color: #000000;">Settings</a>
           </li>
           <li role="none">
-            <a role="menuitem" @click="handleLogout" class="focus-ring cursor-pointer" style="color: #EA4405;">Logout</a>
+            <a role="menuitem" @click="handleLogout" class="focus-ring cursor-pointer" style="color: #EF4444;">Logout</a>
           </li>
         </ul>
       </div>

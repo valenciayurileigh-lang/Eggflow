@@ -4,14 +4,47 @@
 @custom-variant dark (&:where (data[data-theme="dark"],[data-theme="dark"],));
 @theme {
   --font-display: 'Inter', sans-serif;
-  --color--primary: #4631b5;
-  --color--secondary: #F5C857;
-  --color--backgroundDark: #141122;
+  --color--primary: #1A5319;
+  --color--secondary: #508D4E;
+  --color--backgroundDark: #1A5319;
+  --color--background: #D6EFD8;
+  --color--text: #000000;
+  --color--success: #508D4E;
+  --color--edit: #80AF81;
+  --color--danger: #EF4444;
+  --color--warning: #F59E0B;
 }
 
 /* ============================================================================
    CUSTOM STYLES
    ============================================================================ */
+
+/* Disable text selection globally */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+/* Allow text selection in input fields */
+input, textarea, [contenteditable="true"] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  cursor: text;
+}
+
+/* Hide text cursor caret globally except in inputs */
+body {
+  caret-color: transparent;
+}
+
+input, textarea, [contenteditable="true"] {
+  caret-color: #1A5319;
+}
 
 /* Smooth scrolling for the entire app */
 html {
@@ -24,34 +57,34 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #D6EFD8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #80AF81;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #508D4E;
 }
 
 /* Dark mode scrollbar */
 .dark ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #1A5319;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: #508D4E;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #80AF81;
 }
 
 /* Focus styles for better accessibility */
 .focus-ring:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #508D4E;
   outline-offset: 2px;
 }
 
@@ -100,22 +133,22 @@ html {
 
 /* Override input background color */
 .input-success {
-  background-color: #EEEEEE !important;
+  background-color: #D6EFD8 !important;
   
  
 }
 
 .input-success::placeholder {
-  color: #666;
+  color: #508D4E;
   opacity: 1;
 }
 
 .input-success:focus {
   background-color: #ffffff !important;
-  border-color: #000000;
+  border-color: #1A5319;
 }
 
 .input-success:focus::placeholder {
-  color: #333;
+  color: #80AF81;
 }
 

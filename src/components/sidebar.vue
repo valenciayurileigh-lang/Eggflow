@@ -1,19 +1,19 @@
 <template>
-  <aside class="drawer-side" style="background-color: #FFFFFF; border-right: 2px solid #DBE4C9;">
+  <aside class="drawer-side" style="background-color: #FFFFFF; border-right: 2px solid #80AF81;">
     <label for="my-drawer" aria-label="Close sidebar" class="drawer-overlay"></label>
 
     <nav class="menu p-4 w-64 min-h-full" style="background-color: #FFFFFF; color: #000000;" aria-label="Main navigation">
       <!-- Header -->
-      <header class="mb-6 px-3 py-3 flex items-center" style="border-bottom: 2px solid #DBE4C9;">
-        <h1 class="text-base font-bold" style="color: #EA4405;">EGG FLOW SYSTEM</h1>
+      <header class="mb-6 px-3 py-3 flex items-center" style="border-bottom: 2px solid #80AF81;">
+        <h1 class="text-base font-bold" style="color: #1A5319;">EGG FLOW SYSTEM</h1>
       </header>
 
       <ul class="space-y-1" role="list">
         <li v-for="(link, index) in links" :key="index" class="relative">
           <button
             class="flex items-center w-full px-3 py-2.5 rounded-lg text-left transition-all duration-200 text-sm"
-            :style="link.active ? 'background-color: #DBE4C9; color: #EA4405; font-weight: 600;' : 'color: #000000;'"
-            @mouseenter="!link.active ? $event.target.style.backgroundColor = '#F5F5F0' : null"
+            :style="link.active ? 'background-color: #508D4E; color: #FFFFFF; font-weight: 600;' : 'color: #000000;'"
+            @mouseenter="!link.active ? $event.target.style.backgroundColor = '#D6EFD8' : null"
             @mouseleave="!link.active ? $event.target.style.backgroundColor = 'transparent' : null"
             :aria-expanded="link.children ? link.open : undefined"
             :aria-haspopup="link.children ? 'true' : undefined"
@@ -42,7 +42,7 @@
             <ul
               v-if="link.children && link.open"
               class="mt-1 ml-7 space-y-1 pl-3"
-              style="border-left: 2px solid #DBE4C9;"
+              style="border-left: 2px solid #80AF81;"
               role="group"
             >
               <li v-for="(child, childIndex) in link.children" :key="childIndex">
@@ -50,7 +50,7 @@
                   href="#"
                   class="block px-2 py-2 rounded-md text-xs transition-colors duration-200"
                   style="color: #000000;"
-                  @mouseenter="$event.target.style.backgroundColor = '#F5F5F0'"
+                  @mouseenter="$event.target.style.backgroundColor = '#D6EFD8'"
                   @mouseleave="$event.target.style.backgroundColor = 'transparent'"
                   @click.prevent="setActiveChild(index, childIndex)"
                 >

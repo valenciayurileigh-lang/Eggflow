@@ -1,9 +1,8 @@
 <template class="user-select-none">
-  <main class="flex-1 p-6 bg-gray-50 dark:bg-gray-900 overflow-auto">
+  <main class="flex-1 p-6 overflow-auto" style="background-color: #D6EFD8;">
     <!-- Page Header -->
     <header class="mb-8">
-      <h1 id="dashboard-title"  class="text-3xl font-bold  user-select-none"\
-       style="color: #EA4405;">Overview</h1>
+      <h1 id="dashboard-title"  class="text-3xl font-bold user-select-none" style="color: #1A5319;">Overview</h1>
       <p class="mt-2" style="color: #000000;">Welcome to Eggflow System</p>
     </header>
 
@@ -11,50 +10,50 @@
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8" aria-labelledby="stats-heading">
       <h2 id="stats-heading" class="sr-only">Key Statistics</h2>
 
-      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
+      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #80AF81;">
         <div class="flex items-center justify-between">
           <div>
             <p class="text-sm font-medium" style="color: #000000;">Total Orders</p>
-            <p class="text-2xl font-bold mt-2" style="color: #EA4405;" aria-label="Total orders count">1,234</p>
+            <p class="text-2xl font-bold mt-2" style="color: #1A5319;" aria-label="Total orders count">1,234</p>
           </div>
-          <div class="p-3 rounded-lg" style="background-color: #DBE4C9;">
-            <Icon icon="heroicons-outline:shopping-cart" class="w-6 h-6" style="color: #8AA624;" aria-hidden="true" />
+          <div class="p-3 rounded-lg" style="background-color: #D6EFD8;">
+            <Icon icon="heroicons-outline:shopping-cart" class="w-6 h-6" style="color: #508D4E;" aria-hidden="true" />
           </div>
         </div>
       </article>
 
-      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
+      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #80AF81;">
         <div class="flex items-center justify-between">
           <div>
             <p class="text-sm font-medium" style="color: #000000;">Revenue</p>
-            <p class="text-2xl font-bold mt-2" style="color: #EA4405;" aria-label="Total revenue amount">$45,320</p>
+            <p class="text-2xl font-bold mt-2" style="color: #1A5319;" aria-label="Total revenue amount">$45,320</p>
           </div>
-          <div class="p-3 rounded-lg" style="background-color: #DBE4C9;">
-            <Icon icon="heroicons-outline:currency-dollar" class="w-6 h-6" style="color: #8AA624;" aria-hidden="true" />
+          <div class="p-3 rounded-lg" style="background-color: #D6EFD8;">
+            <Icon icon="heroicons-outline:currency-dollar" class="w-6 h-6" style="color: #508D4E;" aria-hidden="true" />
           </div>
         </div>
       </article>
 
-      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
+      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #80AF81;">
         <div class="flex items-center justify-between">
           <div>
             <p class="text-sm font-medium" style="color: #000000;">Customers</p>
-            <p class="text-2xl font-bold mt-2" style="color: #EA4405;" aria-label="Total customers count">523</p>
+            <p class="text-2xl font-bold mt-2" style="color: #1A5319;" aria-label="Total customers count">523</p>
           </div>
-          <div class="p-3 rounded-lg" style="background-color: #DBE4C9;">
-            <Icon icon="heroicons-outline:user-group" class="w-6 h-6" style="color: #8AA624;" aria-hidden="true" />
+          <div class="p-3 rounded-lg" style="background-color: #D6EFD8;">
+            <Icon icon="heroicons-outline:user-group" class="w-6 h-6" style="color: #508D4E;" aria-hidden="true" />
           </div>
         </div>
       </article>
 
-      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
+      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #80AF81;">
         <div class="flex items-center justify-between">
           <div>
             <p class="text-sm font-medium" style="color: #000000;">Pending</p>
-            <p class="text-2xl font-bold mt-2" style="color: #EA4405;" aria-label="Pending items count">42</p>
+            <p class="text-2xl font-bold mt-2" style="color: #1A5319;" aria-label="Pending items count">42</p>
           </div>
-          <div class="p-3 rounded-lg" style="background-color: #DBE4C9;">
-            <Icon icon="heroicons-outline:clock" class="w-6 h-6" style="color: #8AA624;" aria-hidden="true" />
+          <div class="p-3 rounded-lg" style="background-color: #D6EFD8;">
+            <Icon icon="heroicons-outline:clock" class="w-6 h-6" style="color: #508D4E;" aria-hidden="true" />
           </div>
         </div>
       </article>
@@ -65,28 +64,28 @@
       <h2 id="charts-heading" class="sr-only">Analytics Charts</h2>
 
       <!-- Sales Chart -->
-      <article class="rounded-lg shadow-sm p-6" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
-        <h3 class="text-lg font-semibold mb-4" style="color: #EA4405;">Sales This Month</h3>
-        <div class="h-64 flex items-center justify-center rounded" style="background-color: #F8F8F0;" role="img" aria-label="Sales chart placeholder">
+      <article class="rounded-lg shadow-sm p-6" style="background-color: #FFFFFF; border: 2px solid #80AF81;">
+        <h3 class="text-lg font-semibold mb-4" style="color: #1A5319;">Sales This Month</h3>
+        <div class="h-64 flex items-center justify-center rounded" style="background-color: #D6EFD8;" role="img" aria-label="Sales chart placeholder">
           <p style="color: #000000;">Chart placeholder</p>
         </div>
       </article>
 
       <!-- Activity Chart -->
-      <article class="rounded-lg shadow-sm p-6" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
-        <h3 class="text-lg font-semibold mb-4" style="color: #EA4405;">Activity Overview</h3>
-        <div class="h-64 flex items-center justify-center rounded" style="background-color: #F8F8F0;" role="img" aria-label="Activity chart placeholder">
+      <article class="rounded-lg shadow-sm p-6" style="background-color: #FFFFFF; border: 2px solid #80AF81;">
+        <h3 class="text-lg font-semibold mb-4" style="color: #1A5319;">Activity Overview</h3>
+        <div class="h-64 flex items-center justify-center rounded" style="background-color: #D6EFD8;" role="img" aria-label="Activity chart placeholder">
           <p style="color: #000000;">Chart placeholder</p>
         </div>
       </article>
     </section>
 
     <!-- Recent Activity -->
-    <section class="rounded-lg shadow-sm p-6" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;" aria-labelledby="orders-heading">
-      <h2 id="orders-heading" class="text-lg font-semibold mb-4" style="color: #EA4405;">Recent Orders</h2>
+    <section class="rounded-lg shadow-sm p-6" style="background-color: #FFFFFF; border: 2px solid #80AF81;" aria-labelledby="orders-heading">
+      <h2 id="orders-heading" class="text-lg font-semibold mb-4" style="color: #1A5319;">Recent Orders</h2>
       <div class="overflow-x-auto">
         <table class="w-full text-sm" role="table" aria-label="Recent orders table">
-          <thead style="border-bottom: 2px solid #DBE4C9;">
+          <thead style="border-bottom: 2px solid #80AF81;">
             <tr>
               <th scope="col" class="text-left py-3 px-4 font-semibold" style="color: #000000;">Order ID</th>
               <th scope="col" class="text-left py-3 px-4 font-semibold" style="color: #000000;">Customer</th>
@@ -99,11 +98,11 @@
               v-for="order in orders"
               :key="order.id"
               class="transition-colors"
-              style="border-bottom: 1px solid #DBE4C9;"
-              @mouseenter="$event.currentTarget.style.backgroundColor = '#F8F8F0'"
+              style="border-bottom: 1px solid #80AF81;"
+              @mouseenter="$event.currentTarget.style.backgroundColor = '#D6EFD8'"
               @mouseleave="$event.currentTarget.style.backgroundColor = 'transparent'"
             >
-              <td class="py-3 px-4 font-medium" style="color: #EA4405;">#{{ order.id }}</td>
+              <td class="py-3 px-4 font-medium" style="color: #1A5319;">#{{ order.id }}</td>
               <td class="py-3 px-4" style="color: #000000;">{{ order.customer }}</td>
               <td class="py-3 px-4" style="color: #000000;">${{ order.amount }}</td>
               <td class="py-3 px-4">
