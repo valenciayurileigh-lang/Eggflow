@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/Eggflow/',
   plugins: [
     vue(), // Vue 3 plugin for Vite
     tailwindcss(), // Tailwind CSS v4 plugin
