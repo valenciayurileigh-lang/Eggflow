@@ -1,101 +1,117 @@
 <template class="user-select-none">
   <main class="flex-1 p-6 bg-gray-50 dark:bg-gray-900 overflow-auto">
     <!-- Page Header -->
-    <div class="mb-8 pointer-events-none user-select-none">
-      <h1 class="text-3xl font-bold text-gray-900 dark:text-white select-none user-select-none">Dashboard</h1>
-      <p class="text-gray-600 dark:text-gray-400 mt-2 user-select-none">Welcome to Eggflow System</p>
-    </div>
+    <header class="mb-8">
+      <h1 id="dashboard-title"  class="text-3xl font-bold  user-select-none"\
+       style="color: #EA4405;">Overview</h1>
+      <p class="mt-2" style="color: #000000;">Welcome to Eggflow System</p>
+    </header>
 
     <!-- Stats Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="text-gray-600 dark:text-gray-400 text-sm font-medium">Total Orders</p>
-            <p class="text-2xl font-bold text-gray-900 dark:text-white mt-2">1,234</p>
-          </div>
-          <div class="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
-            <Icon icon="heroicons-outline:shopping-cart" class="w-6 h-6 text-blue-600" />
-          </div>
-        </div>
-      </div>
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8" aria-labelledby="stats-heading">
+      <h2 id="stats-heading" class="sr-only">Key Statistics</h2>
 
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-gray-600 dark:text-gray-400 text-sm font-medium">Revenue</p>
-            <p class="text-2xl font-bold text-gray-900 dark:text-white mt-2">$45,320</p>
+            <p class="text-sm font-medium" style="color: #000000;">Total Orders</p>
+            <p class="text-2xl font-bold mt-2" style="color: #EA4405;" aria-label="Total orders count">1,234</p>
           </div>
-          <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg">
-            <Icon icon="heroicons-outline:currency-dollar" class="w-6 h-6 text-green-600" />
+          <div class="p-3 rounded-lg" style="background-color: #DBE4C9;">
+            <Icon icon="heroicons-outline:shopping-cart" class="w-6 h-6" style="color: #8AA624;" aria-hidden="true" />
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-gray-600 dark:text-gray-400 text-sm font-medium">Customers</p>
-            <p class="text-2xl font-bold text-gray-900 dark:text-white mt-2">523</p>
+            <p class="text-sm font-medium" style="color: #000000;">Revenue</p>
+            <p class="text-2xl font-bold mt-2" style="color: #EA4405;" aria-label="Total revenue amount">$45,320</p>
           </div>
-          <div class="bg-purple-100 dark:bg-purple-900/30 p-3 rounded-lg">
-            <Icon icon="heroicons-outline:user-group" class="w-6 h-6 text-purple-600" />
+          <div class="p-3 rounded-lg" style="background-color: #DBE4C9;">
+            <Icon icon="heroicons-outline:currency-dollar" class="w-6 h-6" style="color: #8AA624;" aria-hidden="true" />
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-gray-600 dark:text-gray-400 text-sm font-medium">Pending</p>
-            <p class="text-2xl font-bold text-gray-900 dark:text-white mt-2">42</p>
+            <p class="text-sm font-medium" style="color: #000000;">Customers</p>
+            <p class="text-2xl font-bold mt-2" style="color: #EA4405;" aria-label="Total customers count">523</p>
           </div>
-          <div class="bg-orange-100 dark:bg-orange-900/30 p-3 rounded-lg">
-            <Icon icon="heroicons-outline:clock" class="w-6 h-6 text-orange-600" />
+          <div class="p-3 rounded-lg" style="background-color: #DBE4C9;">
+            <Icon icon="heroicons-outline:user-group" class="w-6 h-6" style="color: #8AA624;" aria-hidden="true" />
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+
+      <article class="rounded-lg shadow-sm p-6 card-hover" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm font-medium" style="color: #000000;">Pending</p>
+            <p class="text-2xl font-bold mt-2" style="color: #EA4405;" aria-label="Pending items count">42</p>
+          </div>
+          <div class="p-3 rounded-lg" style="background-color: #DBE4C9;">
+            <Icon icon="heroicons-outline:clock" class="w-6 h-6" style="color: #8AA624;" aria-hidden="true" />
+          </div>
+        </div>
+      </article>
+    </section>
 
     <!-- Charts Section -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8" aria-labelledby="charts-heading">
+      <h2 id="charts-heading" class="sr-only">Analytics Charts</h2>
+
       <!-- Sales Chart -->
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
-        <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Sales This Month</h2>
-        <div class="h-64 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-          <p class="text-gray-600 dark:text-gray-400">Chart placeholder</p>
+      <article class="rounded-lg shadow-sm p-6" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
+        <h3 class="text-lg font-semibold mb-4" style="color: #EA4405;">Sales This Month</h3>
+        <div class="h-64 flex items-center justify-center rounded" style="background-color: #F8F8F0;" role="img" aria-label="Sales chart placeholder">
+          <p style="color: #000000;">Chart placeholder</p>
         </div>
-      </div>
+      </article>
 
       <!-- Activity Chart -->
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
-        <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Activity Overview</h2>
-        <div class="h-64 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-          <p class="text-gray-600 dark:text-gray-400">Chart placeholder</p>
+      <article class="rounded-lg shadow-sm p-6" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;">
+        <h3 class="text-lg font-semibold mb-4" style="color: #EA4405;">Activity Overview</h3>
+        <div class="h-64 flex items-center justify-center rounded" style="background-color: #F8F8F0;" role="img" aria-label="Activity chart placeholder">
+          <p style="color: #000000;">Chart placeholder</p>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
 
     <!-- Recent Activity -->
-    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
-      <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Orders</h2>
+    <section class="rounded-lg shadow-sm p-6" style="background-color: #FFFFFF; border: 2px solid #DBE4C9;" aria-labelledby="orders-heading">
+      <h2 id="orders-heading" class="text-lg font-semibold mb-4" style="color: #EA4405;">Recent Orders</h2>
       <div class="overflow-x-auto">
-        <table class="w-full text-sm">
-          <thead class="border-b border-gray-200 dark:border-gray-700">
+        <table class="w-full text-sm" role="table" aria-label="Recent orders table">
+          <thead style="border-bottom: 2px solid #DBE4C9;">
             <tr>
-              <th class="text-left py-3 px-4 font-semibold text-gray-700 dark:text-gray-300">Order ID</th>
-              <th class="text-left py-3 px-4 font-semibold text-gray-700 dark:text-gray-300">Customer</th>
-              <th class="text-left py-3 px-4 font-semibold text-gray-700 dark:text-gray-300">Amount</th>
-              <th class="text-left py-3 px-4 font-semibold text-gray-700 dark:text-gray-300">Status</th>
+              <th scope="col" class="text-left py-3 px-4 font-semibold" style="color: #000000;">Order ID</th>
+              <th scope="col" class="text-left py-3 px-4 font-semibold" style="color: #000000;">Customer</th>
+              <th scope="col" class="text-left py-3 px-4 font-semibold" style="color: #000000;">Amount</th>
+              <th scope="col" class="text-left py-3 px-4 font-semibold" style="color: #000000;">Status</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="order in orders" :key="order.id" class="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700/50">
-              <td class="py-3 px-4 text-gray-900 dark:text-white">#{{ order.id }}</td>
-              <td class="py-3 px-4 text-gray-700 dark:text-gray-300">{{ order.customer }}</td>
-              <td class="py-3 px-4 text-gray-700 dark:text-gray-300">${{ order.amount }}</td>
+            <tr
+              v-for="order in orders"
+              :key="order.id"
+              class="transition-colors"
+              style="border-bottom: 1px solid #DBE4C9;"
+              @mouseenter="$event.currentTarget.style.backgroundColor = '#F8F8F0'"
+              @mouseleave="$event.currentTarget.style.backgroundColor = 'transparent'"
+            >
+              <td class="py-3 px-4 font-medium" style="color: #EA4405;">#{{ order.id }}</td>
+              <td class="py-3 px-4" style="color: #000000;">{{ order.customer }}</td>
+              <td class="py-3 px-4" style="color: #000000;">${{ order.amount }}</td>
               <td class="py-3 px-4">
-                <span :class="getStatusClass(order.status)" class="px-2 py-1 rounded-full text-xs font-medium">
+                <span
+                  :class="getStatusClass(order.status)"
+                  class="px-2 py-1 rounded-full text-xs font-medium"
+                  :aria-label="`Order status: ${order.status}`"
+                >
                   {{ order.status }}
                 </span>
               </td>
@@ -103,7 +119,7 @@
           </tbody>
         </table>
       </div>
-    </div>
+    </section>
   </main>
 </template>
 
@@ -120,9 +136,9 @@ const orders = ref([
 ]);
 
 const statusClassMap = {
-  'Completed': 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
-  'Pending': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400',
-  'Processing': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
+  'Completed': 'bg-green-100 text-green-800',
+  'Pending': 'bg-yellow-100 text-yellow-800',
+  'Processing': 'bg-blue-100 text-blue-800',
 };
 
 const getStatusClass = (status) => {

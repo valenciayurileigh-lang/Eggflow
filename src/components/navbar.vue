@@ -1,6 +1,20 @@
 <template>
-  <header class="navbar bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-white-700 sticky top-0 shadow-sm">
 
+  <header class="navbar sticky top-0 shadow-sm z-10" style="background-color: #FFFFFF; border-bottom: 2px solid #DBE4C9;">
+
+    <!-- Sidebar Toggle Button -->
+    <section class="flex items-center">
+      <label 
+        for="my-drawer" 
+        class="btn btn-ghost btn-circle lg:hidden ml-2"
+        aria-label="Toggle sidebar"
+        style="color: #EA4405;"
+        @mouseenter="$event.target.style.backgroundColor = '#DBE4C9'"
+        @mouseleave="$event.target.style.backgroundColor = 'transparent'"
+      >
+        <Icon icon="heroicons-outline:bars-3" width="24" height="24" />
+      </label>
+    </section>
 
     <!-- Logo and Branding -->
     <section class="flex-1 flex items-center gap-3 ml-4">
@@ -8,24 +22,29 @@
         icon="mdi:egg"
         width="32"
         height="32"
-        class="text-[#F5C857]"
+        style="color: #EA4405;"
         aria-hidden="true"
       />
-      <span class="text-xl font-bold text-gray-900 dark:text-white">Eggflow</span>
+      <span class="text-xl font-bold" style="color: #EA4405;">Dashboard </span>
     </section>
 
     <!-- User Section -->
-    <section class="flex items-center gap-6">
-      <h1 class="text-base font-semibold text-gray-700 dark:text-gray-200">
-        Welcome, User!
+    <section class="flex items-center gap-6 mr-4">
+      <h1 class="text-base font-semibold" style="color: #000000;">
+        Welcome, {{ currentUser?.name || 'User' }}!
       </h1>
 
       <div class="dropdown dropdown-end">
         <button
           tabindex="0"
           role="button"
-          class="btn btn-ghost btn-circle avatar hover:bg-gray-100 dark:hover:bg-gray-700"
+          class="btn btn-ghost btn-circle avatar focus-ring"
+          style="background-color: transparent;"
+          @mouseenter="$event.target.style.backgroundColor = '#DBE4C9'"
+          @mouseleave="$event.target.style.backgroundColor = 'transparent'"
           aria-label="User menu"
+          aria-haspopup="menu"
+          aria-expanded="false"
         >
           <div class="w-10 rounded-full">
             <img src="/user.jpg" alt="User avatar" />
@@ -33,12 +52,20 @@
         </button>
         <ul
           tabindex="0"
-          class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-56 space-y-1 dark:bg-gray-800 font-semibold text-sm"
+          class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-56 space-y-1 font-semibold text-sm"
+          style="background-color: #FFFFFF; border: 2px solid #DBE4C9; color: #000000;"
           role="menu"
+          aria-label="User menu options"
         >
-          <li role="none"><a role="menuitem">Profile</a></li>
-          <li role="none"><a role="menuitem">Settings</a></li>
-          <li role="none"><a role="menuitem">Logout</a></li>
+          <li role="none">
+            <a role="menuitem" href="#" class="focus-ring" style="color: #000000;">Profile</a>
+          </li>
+          <li role="none">
+            <a role="menuitem" href="#" class="focus-ring" style="color: #000000;">Settings</a>
+          </li>
+          <li role="none">
+            <a role="menuitem" @click="handleLogout" class="focus-ring cursor-pointer" style="color: #EA4405;">Logout</a>
+          </li>
         </ul>
       </div>
     </section>
@@ -52,6 +79,15 @@
 
 <script setup>
 import { Icon } from '@iconify/vue';
+import { useRouter } from 'vue-router';
+import { currentUser, logout } from '../stores/auth.js';
+
+const router = useRouter();
 
 defineEmits(['toggle-drawer']);
+
+const handleLogout = () => {
+  logout();
+  router.push('/login');
+};
 </script>
